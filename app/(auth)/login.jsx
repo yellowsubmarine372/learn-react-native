@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, Text } from 'react-native';
+import { StyleSheet, Pressable, Text, TextInput } from 'react-native';
 import { Link } from 'expo-router';
 
 //themed components
@@ -7,6 +7,7 @@ import ThemedText from '../../components/ThemedText';
 import Spacer from '../../components/Spacer';
 import { Colors } from '../../constants/Colors';
 import ThemedButton from '../../components/ThemedButton';
+import ThemedTextInput from '../../components/ThemedTextInput';
 
 const Login = () => {
     const handleSubmit = () => {
@@ -20,6 +21,13 @@ const Login = () => {
             <ThemedText title={true} style={styles.title}>
                 Login to Your Account
             </ThemedText>
+
+            <ThemedTextInput
+                placeholder='Email'
+            />
+            <ThemedTextInput
+                placeholder='Password'
+            />
 
             <ThemedButton onPress={handleSubmit}>
                 <Text style={{color: '#f2f2f2'}}>Login</Text>
