@@ -15,11 +15,14 @@ const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const { user } = useUser()
+    const { login } = useUser()
 
     const handleSubmit = () => {
-        console.log('current user', user)
-        console.log('login for submission', email, password);
+        try {
+            login(email, password)
+        } catch (error) {
+            console.error(error.message)
+        }
     }
 
     return (
