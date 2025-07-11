@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, Text, TouchableWithoutFeedback, Keyboard, ActivityIndicator } from 'react-native';
 import { Link } from 'expo-router';
 import { useState } from 'react';
 
@@ -9,6 +9,7 @@ import Spacer from '../../components/Spacer';
 import { Colors } from '../../constants/Colors';
 import ThemedButton from '../../components/ThemedButton';
 import ThemedTextInput from '../../components/ThemedTextInput';
+
 import { useUser } from '../../hooks/useUser';
 
 const Login = () => {
