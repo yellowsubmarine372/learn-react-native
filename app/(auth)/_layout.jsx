@@ -6,15 +6,15 @@ export default function AuthLayout() {
 
     const { user } = useUser()
     console.log('current user', user)
-    
+
     return (
         <>
             <StatusBar style="auto" />
             <Stack 
-                screenOptions={{
+                    screenOptions={{
                     headerShown: false, animation: "none"
                 }}
-            />
+                />
         </>
     )
 }
