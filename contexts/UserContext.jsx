@@ -29,7 +29,8 @@ export function UserProvider({ children }) {
 
     /*don't need email, password, just logout*/
     async function logout() {
-
+        await account.deleteSession('current')
+        setUser(null)
     }
 
     return (
